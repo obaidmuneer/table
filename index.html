@@ -32,10 +32,10 @@
                     console.log(element);
                     // result = `<ul><li> ${element} </li ></ul >`
                     // result.innerHTML = element
-                    const node = document.createElement("li");
-                    const textnode = document.createTextNode(element);
-                    node.appendChild(textnode);
-                    document.getElementById("result").appendChild(node);
+                    const li = document.createElement("li");
+                    const data = document.createTextNode(element);
+                    node.appendChild(data);
+                    document.getElementById("result").appendChild(li);
                 }
 
 
