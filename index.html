@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form onsubmit="check(); return false">
+        <input type="text" name="" id="table">
+        <button type="submit">Click me</button>
+        <h3>
+            <ul id="result">
+
+            </ul>
+        </h3>
+
+
+        <script>
+            function check() {
+                let table = +document.querySelector('#table').value
+                // let result = +document.querySelector('#result')
+                let result = ''
+
+                for (let i = 1; i <= 10; i++) {
+                    // const element = array[i];
+                    const element = table * i;
+                    console.log(element);
+                    // result = `<ul><li> ${element} </li ></ul >`
+                    // result.innerHTML = element
+                    const node = document.createElement("li");
+                    const textnode = document.createTextNode(element);
+                    node.appendChild(textnode);
+                    document.getElementById("result").appendChild(node);
+                }
+
+
+                // document.querySelector('#result').innerHTML = result
+
+            }
+        </script>
+    </form>
+</body>
+
+</html>
