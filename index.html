@@ -10,7 +10,8 @@
 
 <body>
     <form onsubmit="check(); return false">
-        <input type="text" name="" id="table">
+        <input type="text" name="" id="start">
+        <input type="text" name="" id="end">
         <button type="submit">Click me</button>
         <h3>
             <ul id="result">
@@ -21,26 +22,16 @@
 
         <script>
             function check() {
-                let table = +document.querySelector('#table').value
-                // let result = +document.querySelector('#result')
+                let start = +document.querySelector('#start').value
+                let end = +document.querySelector('#end').value
                 let result = ''
                 document.getElementById("result").innerHTML = ''
 
-                for (let i = 1; i <= 10; i++) {
-                    // const element = array[i];
-                    const element = table * i;
-                    console.log(element);
-                    // result = `<ul><li> ${element} </li ></ul >`
-                    // result.innerHTML = element
-                    const li = document.createElement("li");
-                    const data = document.createTextNode(element);
-                    node.appendChild(data);
-                    document.getElementById("result").appendChild(li);
+                for (let i = 0; i < end; i++) {
+                    let count = i+1
+                    result = `${start} x ${count} = ${start*count} <br>`
+                document.getElementById("result").innerHTML += result
                 }
-
-
-                // document.querySelector('#result').innerHTML = result
-
             }
         </script>
     </form>
